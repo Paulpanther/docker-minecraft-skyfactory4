@@ -5,6 +5,8 @@ set -e
 cd /data
 
 cp -rf /tmp/feed-the-beast/* .
+sed -i "/B:skylightForest=true/ c B:skylightForest=false" config/twilightforest.cfg
+ 
 echo "eula=true" > eula.txt
 
 if [[ ! -e server.properties ]]; then
